@@ -1,41 +1,53 @@
 import "./styles.css";
 import logo from "../../assets/sidebar/logo/logoLB.png";
 import "boxicons/css/boxicons.min.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { PortfolioContext } from "../../context/Context";
 
-export const SideBar = () => {
+export function SideBar() {
   const [isDarkLight, setIsDarkLight] = useState("dark");
-  const [isSidebarClose, setIsSidebarClose] = useState(false);
-  const [isArrowClose, setIsArrowClose] = useState(false);
+  const [isSidebarClose, setIsSidebarClose] = useState(true);
+
+  const { toggleResponsive } = useContext(PortfolioContext);
 
   const onModeDarkLight = () => {
-    if (isDarkLight === "dark") {
-      setIsDarkLight("light");
-    } else {
-      setIsDarkLight("dark");
-    }
+    setIsDarkLight((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   const onSidebar = () => {
     setIsSidebarClose(!isSidebarClose);
-    // setIsArrowClose(!isArrowClose);
+    toggleResponsive(isSidebarClose);
   };
 
-  console.log(isSidebarClose);
-
   return (
-    <nav className={isSidebarClose ? "sidebar sidebar-close": "sidebar sidebar-open" }>
+    <nav
+      className={
+        isSidebarClose ? "sidebar sidebar-close" : "sidebar sidebar-open"
+      }
+    >
       <header>
         <div className="sidebar-image-text">
           <span className="sidebar-image">
             <img src={logo} alt="logo" />
           </span>
 
-          <div className="sidebar-text sidebar-header-text">
-            <span className="sidebar-name">Luis Blanco</span>
-            <span className="sidebar-profession">Software Developer</span>
-          </div>
+          {!isSidebarClose && (
+            <div className="sidebar-text sidebar-header-text">
+              <span className="sidebar-name">Luis Blanco</span>
+              <br />
+              <span className="sidebar-profession">Software Developer</span>
+            </div>
+          )}
         </div>
+
+        <select id="options" name="options" className="sidebar-select">
+          <option value="option1" className="sidebar-select-option">
+            🇺🇸 {!isSidebarClose && <>English</>}
+          </option>
+          <option value="option2" className="sidebar-select-option">
+            🇪🇸 {!isSidebarClose && <>Español</>}
+          </option>
+        </select>
 
         <i
           className={
@@ -49,71 +61,77 @@ export const SideBar = () => {
 
       <div className="sidebar-menu-bar">
         <div className="sidebar-menu">
-          {/* <li className="sidebar-search-box">
-            <i className="bx bx-search sidebar-icon" />
-            <input
-              type="search"
-              placeholder="Search..."
-              className="sidebar-search"
-            />
-          </li> */}
           <ul className="sidebar-menu-links">
             <li className="sidebar-nav-link">
               <a href="#">
                 <i className="bx bx-home-alt sidebar-icon" />
-                <span className="sidebar-text sidebar-nav-text">Dashboard</span>
-              </a>
-            </li>
-
-            <li className="sidebar-nav-link">
-              <a href="#">
-                <i className="bx bx-bar-chart-alt-2 sidebar-icon" />
-                <span className="sidebar-text sidebar-nav-text">Revenue</span>
-              </a>
-            </li>
-
-            <li className="sidebar-nav-link">
-              <a href="#">
-                <i className="bx bx-bell sidebar-icon" />
-                <span className="sidebar-text sidebar-nav-text">
-                  Notifications
+                <span
+                  className={
+                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
+                  }
+                >
+                  About me
                 </span>
               </a>
             </li>
 
             <li className="sidebar-nav-link">
               <a href="#">
-                <i className="bx bx-pie-chart-alt sidebar-icon" />
-                <span className="sidebar-text sidebar-nav-text">Analytics</span>
+                <i className="bx bx-book sidebar-icon" />
+                <span
+                  className={
+                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
+                  }
+                >
+                  Skills
+                </span>
               </a>
             </li>
 
             <li className="sidebar-nav-link">
               <a href="#">
-                <i className="bx bx-heart sidebar-icon" />
-                <span className="sidebar-text sidebar-nav-text">Likes</span>
+                <i className="bx bx-bar-chart-alt-2 sidebar-icon" />
+                <span
+                  className={
+                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
+                  }
+                >
+                  Projects
+                </span>
               </a>
             </li>
 
             <li className="sidebar-nav-link">
               <a href="#">
-                <i className="bx bx-wallet sidebar-icon" />
-                <span className="sidebar-text sidebar-nav-text">Wallets</span>
+                <i className="bx bx-receipt sidebar-icon" />
+                <span
+                  className={
+                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
+                  }
+                >
+                  Certificates
+                </span>
+              </a>
+            </li>
+
+            <li className="sidebar-nav-link">
+              <a href="#">
+                <i className="bx bx-book-content sidebar-icon" />
+                <span
+                  className={
+                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
+                  }
+                >
+                  Contact form
+                </span>
               </a>
             </li>
           </ul>
         </div>
 
         <div className="sidebar-bottom-content">
-          {/* <li className="">
-            <a href="#">
-              <i className="bx bx-log-out sidebar-icon" />
-              <span className="sidebar-text sidebar-nav-text">Logout</span>
-            </a>
-          </li> */}
-
           <li className="sidebar-mode">
-            <div className="sidebar-moon-sun">
+            <div className="sidebar-moon-sun" onClick={onModeDarkLight}>
               {isDarkLight === "dark" ? (
                 <i className="bx bx-sun sidebar-icon sun" />
               ) : (
@@ -121,23 +139,29 @@ export const SideBar = () => {
               )}
             </div>
             {isDarkLight === "dark" ? (
-              <span className="sidebar-mode-text sidebar-text">Light Mode</span>
-            ) : (
-              <span className="sidebar-mode-text sidebar-text">Dark Mode</span>
-            )}
-
-            <div className="sidebar-toggle-switch" onClick={onModeDarkLight}>
               <span
                 className={
-                  isDarkLight === "dark"
-                    ? "sidebar-switch sidebar-switch-light"
-                    : "sidebar-switch sidebar-switch-dark"
+                  isSidebarClose
+                    ? "sidebar-nav-text-none"
+                    : "sidebar-mode-text sidebar-text"
                 }
-              ></span>
-            </div>
+              >
+                Light Mode
+              </span>
+            ) : (
+              <span
+                className={
+                  isSidebarClose
+                    ? "sidebar-nav-text-none"
+                    : "sidebar-mode-text sidebar-text"
+                }
+              >
+                Dark Mode
+              </span>
+            )}
           </li>
         </div>
       </div>
     </nav>
   );
-};
+}

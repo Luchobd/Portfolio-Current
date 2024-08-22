@@ -1,0 +1,10 @@
+.open-side-bar {
+    padding-left: 250px;
+    transition: padding-left 0.3s ease;
+}
+
+.close-side-bar {
+    padding-left: 88px;
+    transition: padding-left 0.3s ease;
+}
+
