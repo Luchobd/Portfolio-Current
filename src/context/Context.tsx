@@ -5,6 +5,7 @@ export type PortfolioContextProps = {
   portfolioState: PortfolioState;
   toggleResponsive: (isResponsive: boolean) => void;
   changeLanguage: (language: string) => void;
+  toggleDarkLight: (darkLight: string) => void;
 };
 
 export const PortfolioContext = createContext<PortfolioContextProps>(

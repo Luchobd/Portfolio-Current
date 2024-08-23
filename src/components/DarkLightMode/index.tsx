@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { PortfolioContext } from "../../context/Context";
 
 export function DarkLightMode({ isSidebarClose }: { isSidebarClose: boolean }) {
   const [isDarkLight, setIsDarkLight] = useState("dark");
+  const { toggleDarkLight } = useContext(PortfolioContext);
+
   const onModeDarkLight = () => {
     setIsDarkLight((prev) => (prev === "dark" ? "light" : "dark"));
+    toggleDarkLight(isDarkLight)
   };
+
   return (
     <div className="sidebar-bottom-content">
       <li className="sidebar-mode">

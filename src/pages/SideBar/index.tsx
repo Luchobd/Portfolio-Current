@@ -11,7 +11,7 @@ export function SideBar() {
   return (
     <nav
       className={
-        isSidebarClose ? "sidebar sidebar-close" : "sidebar sidebar-open"
+        isSidebarClose ? "sidebar sidebar-close" : "sidebar sidebar-open" 
       }
     >
       <header>
