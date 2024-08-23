@@ -1,23 +1,12 @@
-import "./styles.css";
-import logo from "../../assets/sidebar/logo/logoLB.png";
+import { useSidebar } from "../../hooks/sidebar/useSidebar";
+import { DarkLightMode, Languages } from "../../components/index";
 import "boxicons/css/boxicons.min.css";
-import { useContext, useState } from "react";
-import { PortfolioContext } from "../../context/Context";
+import logo from "../../assets/sidebar/logo/logoLB.png";
+import "./styles.css";
+import { SidebarLink } from "../../components/SidebarLink";
 
 export function SideBar() {
-  const [isDarkLight, setIsDarkLight] = useState("dark");
-  const [isSidebarClose, setIsSidebarClose] = useState(true);
-
-  const { toggleResponsive } = useContext(PortfolioContext);
-
-  const onModeDarkLight = () => {
-    setIsDarkLight((prev) => (prev === "dark" ? "light" : "dark"));
-  };
-
-  const onSidebar = () => {
-    setIsSidebarClose(!isSidebarClose);
-    toggleResponsive(isSidebarClose);
-  };
+  const { isSidebarClose, onSidebar } = useSidebar();
 
   return (
     <nav
@@ -40,14 +29,7 @@ export function SideBar() {
           )}
         </div>
 
-        <select id="options" name="options" className="sidebar-select">
-          <option value="option1" className="sidebar-select-option">
-            🇺🇸 {!isSidebarClose && <>English</>}
-          </option>
-          <option value="option2" className="sidebar-select-option">
-            🇪🇸 {!isSidebarClose && <>Español</>}
-          </option>
-        </select>
+        <Languages isSidebarClose={isSidebarClose} />
 
         <i
           className={
@@ -62,105 +44,39 @@ export function SideBar() {
       <div className="sidebar-menu-bar">
         <div className="sidebar-menu">
           <ul className="sidebar-menu-links">
-            <li className="sidebar-nav-link">
-              <a href="#">
-                <i className="bx bx-home-alt sidebar-icon" />
-                <span
-                  className={
-                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
-                  }
-                >
-                  About me
-                </span>
-              </a>
-            </li>
+            <SidebarLink
+              href="#"
+              isSidebarClose={isSidebarClose}
+              title={"About me"}
+            />
 
-            <li className="sidebar-nav-link">
-              <a href="#">
-                <i className="bx bx-book sidebar-icon" />
-                <span
-                  className={
-                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
-                  }
-                >
-                  Skills
-                </span>
-              </a>
-            </li>
+            <SidebarLink
+              href="#"
+              isSidebarClose={isSidebarClose}
+              title={"Skills"}
+            />
 
-            <li className="sidebar-nav-link">
-              <a href="#">
-                <i className="bx bx-bar-chart-alt-2 sidebar-icon" />
-                <span
-                  className={
-                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
-                  }
-                >
-                  Projects
-                </span>
-              </a>
-            </li>
+            <SidebarLink
+              href="#"
+              isSidebarClose={isSidebarClose}
+              title={"Projects"}
+            />
 
-            <li className="sidebar-nav-link">
-              <a href="#">
-                <i className="bx bx-receipt sidebar-icon" />
-                <span
-                  className={
-                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
-                  }
-                >
-                  Certificates
-                </span>
-              </a>
-            </li>
+            <SidebarLink
+              href="#"
+              isSidebarClose={isSidebarClose}
+              title={"Certificates"}
+            />
 
-            <li className="sidebar-nav-link">
-              <a href="#">
-                <i className="bx bx-book-content sidebar-icon" />
-                <span
-                  className={
-                    isSidebarClose ? "sidebar-nav-text-none" : "sidebar-text"
-                  }
-                >
-                  Contact form
-                </span>
-              </a>
-            </li>
+            <SidebarLink
+              href="#"
+              isSidebarClose={isSidebarClose}
+              title={"Contact form"}
+            />
           </ul>
         </div>
 
-        <div className="sidebar-bottom-content">
-          <li className="sidebar-mode">
-            <div className="sidebar-moon-sun" onClick={onModeDarkLight}>
-              {isDarkLight === "dark" ? (
-                <i className="bx bx-sun sidebar-icon sun" />
-              ) : (
-                <i className="bx bx-moon sidebar-icon moon" />
-              )}
-            </div>
-            {isDarkLight === "dark" ? (
-              <span
-                className={
-                  isSidebarClose
-                    ? "sidebar-nav-text-none"
-                    : "sidebar-mode-text sidebar-text"
-                }
-              >
-                Light Mode
-              </span>
-            ) : (
-              <span
-                className={
-                  isSidebarClose
-                    ? "sidebar-nav-text-none"
-                    : "sidebar-mode-text sidebar-text"
-                }
-              >
-                Dark Mode
-              </span>
-            )}
-          </li>
-        </div>
+        <DarkLightMode isSidebarClose={isSidebarClose} />
       </div>
     </nav>
   );
