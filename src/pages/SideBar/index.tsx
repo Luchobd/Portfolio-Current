@@ -1,17 +1,26 @@
+import { useContext } from "react";
+import { PortfolioContext } from "../../context/Context";
 import { useSidebar } from "../../hooks/sidebar/useSidebar";
 import { DarkLightMode, Languages } from "../../components/index";
 import "boxicons/css/boxicons.min.css";
 import logo from "../../assets/sidebar/logo/logoLB.png";
 import "./styles.css";
 import { SidebarLink } from "../../components/SidebarLink";
+import {
+  sidebarEnglish,
+  SidebarInfo,
+} from "../../utils/Language/sidebar/sidebar-english";
+import { sidebarSpanish } from "../../utils/Language/sidebar/sidebar-spanish";
 
 export function SideBar() {
+  const { portfolioState } = useContext(PortfolioContext);
   const { isSidebarClose, onSidebar } = useSidebar();
-
+  const sidebarLanguage =
+    portfolioState.language === "en" ? sidebarEnglish : sidebarSpanish;
   return (
     <nav
       className={
-        isSidebarClose ? "sidebar sidebar-close" : "sidebar sidebar-open" 
+        isSidebarClose ? "sidebar sidebar-close" : "sidebar sidebar-open"
       }
     >
       <header>
@@ -44,35 +53,16 @@ export function SideBar() {
       <div className="sidebar-menu-bar">
         <div className="sidebar-menu">
           <ul className="sidebar-menu-links">
-            <SidebarLink
-              href="#"
-              isSidebarClose={isSidebarClose}
-              title={"About me"}
-            />
-
-            <SidebarLink
-              href="#"
-              isSidebarClose={isSidebarClose}
-              title={"Skills"}
-            />
-
-            <SidebarLink
-              href="#"
-              isSidebarClose={isSidebarClose}
-              title={"Projects"}
-            />
-
-            <SidebarLink
-              href="#"
-              isSidebarClose={isSidebarClose}
-              title={"Certificates"}
-            />
-
-            <SidebarLink
-              href="#"
-              isSidebarClose={isSidebarClose}
-              title={"Contact form"}
-            />
+            {sidebarLanguage.map((info: SidebarInfo) => (
+              <div key={info.id}>
+                <SidebarLink
+                  href={info.path}
+                  icon={info.icon}
+                  title={info.name}
+                  isSidebarClose={isSidebarClose}
+                />
+              </div>
+            ))}
           </ul>
         </div>
 
