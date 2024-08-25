@@ -14,8 +14,8 @@ export function Portfolio() {
           : "bodyContainer mode-dark-active"
       }`}
     >
-      <SideBar />
       <Home />
+      <SideBar />
     </div>
   );
 }

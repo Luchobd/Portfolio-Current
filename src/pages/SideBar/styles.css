@@ -114,7 +114,7 @@
   border-radius: 50%;
   color: var(--sidebar-color);
   font-size: 22px;
-  transition: var(--trans-03);
+  transition: var(--trans-05);
 }
 
 .sidebar header .sidebar-toggle-close {
