@@ -162,3 +162,9 @@
 .sidebar-menu-bar .sidebar-mode i {
   position: absolute;
 }
+
+@media (max-width: 770px) {
+  .sidebar-open {
+    width: 95vw;
+  }
+}
