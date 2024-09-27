@@ -1,7 +1,12 @@
 import { ChangeEvent, useContext } from "react";
 import { PortfolioContext } from "../../context/Context";
 
-export function Languages({ isSidebarClose }: { isSidebarClose: boolean }) {
+interface Props {
+  isSidebarClose?: boolean;
+  isShowText?: boolean;
+}
+
+export function Languages({ isSidebarClose, isShowText = true }: Props) {
   const { changeLanguage } = useContext(PortfolioContext);
 
   const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -23,10 +28,10 @@ export function Languages({ isSidebarClose }: { isSidebarClose: boolean }) {
       onChange={handleLanguageChange}
     >
       <option value="english" className="sidebar-select-option">
-        🇺🇸 {!isSidebarClose && <>English</>}
+        🇺🇸 {!isSidebarClose && isShowText && <>English</>}
       </option>
       <option value="spanish" className="sidebar-select-option">
-        🇪🇸 {!isSidebarClose && <>Español</>}
+        🇪🇸 {!isSidebarClose && isShowText && <>Español</>}
       </option>
     </select>
   );

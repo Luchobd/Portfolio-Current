@@ -9,7 +9,7 @@
   transition: padding-left 0.3s ease;
 }
 
-.close-side-bar {
+.open-side-bar {
   padding-left: 88px;
   transition: padding-left 0.3s ease;
 }

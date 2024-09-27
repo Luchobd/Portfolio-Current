@@ -1,7 +1,12 @@
 import { useContext, useState } from "react";
 import { PortfolioContext } from "../../context/Context";
 
-export function DarkLightMode({ isSidebarClose }: { isSidebarClose: boolean }) {
+interface Props {
+  isSidebarClose?: boolean;
+  isShowText?: boolean;
+}
+
+export function DarkLightMode({ isSidebarClose, isShowText = true }: Props) {
   const [isDarkLight, setIsDarkLight] = useState("dark");
   const { toggleDarkLight, portfolioState } = useContext(PortfolioContext);
 
@@ -38,7 +43,7 @@ export function DarkLightMode({ isSidebarClose }: { isSidebarClose: boolean }) {
                 : "sidebar-mode-text sidebar-text"
             }
           >
-            {lightModeText}
+            {isShowText && lightModeText}
           </span>
         ) : (
           <span
@@ -49,7 +54,7 @@ export function DarkLightMode({ isSidebarClose }: { isSidebarClose: boolean }) {
                 : "sidebar-mode-text sidebar-text"
             }
           >
-            {darkModeText}
+            {isShowText && darkModeText}
           </span>
         )}
       </li>

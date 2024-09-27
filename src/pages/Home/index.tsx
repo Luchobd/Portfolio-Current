@@ -1,7 +1,6 @@
 import "boxicons/css/boxicons.min.css";
 import "./styles.css";
-import { Fragment, useContext } from "react";
-import { HomeIcons, homeIcons } from "../../utils/Icons/home/home-icons";
+import { useContext } from "react";
 import { PortfolioContext } from "../../context/Context";
 import { homeEnglish } from "../../utils/Language/home/home-english";
 import { homeSpanish } from "../../utils/Language/home/home-spanish";
@@ -38,7 +37,7 @@ export function Home() {
 
   return (
     <main className="home">
-      <section className="home-social-media">
+      {/* <section className="home-social-media">
         {homeIcons.map((social: HomeIcons) => (
           <Fragment key={social.id}>
             <a href={social.href} target="_blank" title={social.title}>
@@ -46,7 +45,7 @@ export function Home() {
             </a>
           </Fragment>
         ))}
-      </section>
+      </section> */}
       <section className="home-about">
         {homeEnglishLanguage && (
           <LanguageHome

@@ -55,9 +55,9 @@ export function LanguageHome({
       <aside className="home-content home-space">
         <p className="home-description">{description_one}</p>
         <br />
-        <p className="home-description">{description_two}</p>
+        <p className="home-description home-description-two">{description_two}</p>
         <br />
-        <p className="home-description">{description_three}</p>
+        <p className="home-description home-description-three">{description_three}</p>
       </aside>
     </>
   );
