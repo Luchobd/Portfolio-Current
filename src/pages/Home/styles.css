@@ -7,7 +7,7 @@ a {
 }
 
 .home {
-  padding: 0 10px;
+  padding: 0 20px;
   height: 100vh;
   background-image: linear-gradient(135deg, #3e2c417e 0%, #261c2c98 100%),
     url(../../assets/home/desktop-home.jpg);
@@ -41,17 +41,14 @@ a {
 
 .home-about {
   display: flex;
+  justify-content: space-between;
 }
 
 .home-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-.home-space {
-  width: 50%;
+  align-items: flex-start;
 }
 
 .home-picture {
@@ -60,11 +57,11 @@ a {
 }
 
 .home-image {
-  display: block;
   max-width: 100%;
+  width: 100%;
   height: auto;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 0 0 10px 0;
+  display: block;
+  border-radius: 10px 0 10px 0;
 }
 
 .home-hi {
@@ -78,21 +75,17 @@ a {
 .home-hi,
 .home-name,
 .home-phrase {
-  font-size: 20px;
-  color: var(--toggle-color);
-}
-
-.home-description {
-  font-size: 16px;
+  font-size: 32px;
   color: var(--toggle-color);
 }
 
 .home-dev {
-  font-size: 24px;
+  font-size: 32px;
   color: var(--toggle-color);
 }
 
 .home-view-download {
+  height: 50px;
   width: 250px;
   margin-top: 15px;
   display: flex;
@@ -104,7 +97,8 @@ a {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .home-button-cv {
@@ -120,48 +114,52 @@ a {
 }
 
 .home-button-cv:hover {
-  font-size: 18px;
+  font-size: 14px;
   transition: var(--trans-03);
   cursor: pointer;
   background-color: #28a745;
 }
 
 .home-container-description {
-  padding: 50px 100px;
+  background-color: var(--sidebar-color);
+  padding: 50px 20px;
+  text-align: left;
+}
+
+.home-title-under {
+  font-size: 32px;
+  color: var(--text-color);
+}
+
+.home-description-under {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.home-space-under {
+  display: flex;
+}
+
+.home-border-under {
+  border-top: 3px solid var(--index-color);
+  width: 120px;
+  height: auto;
+  margin-top: 15px;
+  margin-right: 10px;
 }
 
 @media (max-width: 1024px) {
-  .home-description-three {
-    display: none;
-  }
-
-  .home-title {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .home-view-download {
     width: 220px;
-  }
-
-  .home-content {
-    display: none;
-  }
-
-  .home-space {
-    width: 100%;
-    text-align: center;
   }
 }
 
 @media (max-width: 700px) {
-  .home-container-description {
-    padding: 20px;
-    display: flex;
-    align-items: center;
+  .home-about {
     justify-content: center;
+  }
+
+  .home-image {
+    display: none;
   }
 }

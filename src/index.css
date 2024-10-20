@@ -23,6 +23,10 @@
   --trans-05: all 0.5s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100vh;
@@ -37,6 +41,7 @@ body {
   --primary-color-light: #f6f5ff;
   --toggle-color: #ddd;
   --text-color: #707070;
+  --index-color: #c8aa5e;
 }
 
 .mode-dark-active {
@@ -46,4 +51,5 @@ body {
   --primary-color-light: #3a3b3c;
   --toggle-color: #fff;
   --text-color: #ccc;
+  --index-color: #c8aa5e;
 }

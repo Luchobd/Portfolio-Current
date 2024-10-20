@@ -15,9 +15,7 @@ export function Home() {
     phrase,
     view,
     download,
-    description_one,
-    description_two,
-    description_three,
+    description,
   } = homeEnglish;
 
   const {
@@ -27,9 +25,7 @@ export function Home() {
     phraseSpanish,
     viewSpanish,
     downloadSpanish,
-    descriptionSpanish_one,
-    descriptionSpanish_two,
-    descriptionSpanish_three,
+    descriptionSpanish,
   } = homeSpanish;
 
   const homeEnglishLanguage = portfolioState.language === "en";
@@ -37,15 +33,6 @@ export function Home() {
 
   return (
     <main className="home">
-      {/* <section className="home-social-media">
-        {homeIcons.map((social: HomeIcons) => (
-          <Fragment key={social.id}>
-            <a href={social.href} target="_blank" title={social.title}>
-              <i className={`${social.icon} home-icon`} />
-            </a>
-          </Fragment>
-        ))}
-      </section> */}
       <section className="home-about">
         {homeEnglishLanguage && (
           <LanguageHome
@@ -55,9 +42,7 @@ export function Home() {
             phrase={phrase}
             view={view}
             download={download}
-            description_one={description_one}
-            description_two={description_two}
-            description_three={description_three}
+            description={description}
           />
         )}
         {homeSpanishLanguage && (
@@ -68,9 +53,7 @@ export function Home() {
             phrase={phraseSpanish}
             view={viewSpanish}
             download={downloadSpanish}
-            description_one={descriptionSpanish_one}
-            description_two={descriptionSpanish_two}
-            description_three={descriptionSpanish_three}
+            description={descriptionSpanish}
           />
         )}
       </section>

@@ -7,28 +7,13 @@ interface Props {
   phrase: string;
   view: string;
   download: string;
-  description_one: string;
-  description_two: string;
-  description_three: string;
+  description: string;
 }
 
-export function LanguageHome({
-  hi,
-  name,
-  dev,
-  phrase,
-  view,
-  download,
-  description_one,
-  description_two,
-  description_three,
-}: Props) {
+export function LanguageHome({ hi, name, dev, phrase, view, download }: Props) {
   return (
     <>
       <aside className="home-title home-space">
-        <picture className="home-picture">
-          <img src={YO} alt="YO" width={200} className="home-image"/>
-        </picture>
         <div className="home-hi-name">
           <span className="home-hi">{hi}</span>
           <h2 className="home-name">{name}</h2>
@@ -52,12 +37,10 @@ export function LanguageHome({
           </a>
         </div>
       </aside>
-      <aside className="home-content home-space">
-        <p className="home-description">{description_one}</p>
-        <br />
-        <p className="home-description home-description-two">{description_two}</p>
-        <br />
-        <p className="home-description home-description-three">{description_three}</p>
+      <aside className="home-content">
+        <picture className="home-picture">
+          <img src={YO} alt="YO" className="home-image" />
+        </picture>
       </aside>
     </>
   );

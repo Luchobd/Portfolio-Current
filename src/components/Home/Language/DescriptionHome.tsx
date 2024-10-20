@@ -1,27 +1,17 @@
 interface Props {
-  description_one: string;
-  description_two: string;
-  description_three: string;
+  about: string;
+  description: string;
 }
 
-export function DescriptionHome({
-  description_one,
-  description_two,
-  description_three,
-}: Props) {
+export function DescriptionHome({ about, description }: Props) {
   return (
-    <section className="home-content-under">
-      <p className="home-description-under home-description-1">
-        {description_one}
-      </p>
+    <section className="home-content-under" id="about">
+      <h2 className="home-title-under">{about}</h2>
       <br />
-      <p className="home-description-under home-description-2">
-        {description_two}
-      </p>
-      <br />
-      <p className="home-description-under home-description-3">
-        {description_three}
-      </p>
+      <div className="home-space-under">
+        <span className="home-border-under"></span>
+        <p className="home-description-under">{description}</p>
+      </div>
     </section>
   );
 }
