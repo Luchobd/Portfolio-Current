@@ -1,12 +1,8 @@
 import "./App.css";
-import { SideBar } from "./pages";
+import { Portfolio } from "./Portfolio";
 
 function App() {
-  return (
-    <div>
-      <SideBar />
-    </div>
-  );
+  return <Portfolio />;
 }
 
 export default App;

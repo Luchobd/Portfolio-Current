@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,11 +9,11 @@
 :root {
   /* ====== SideBar ====== */
   /* ====== Colors ====== */
-  --body-color: #E4E9F7;
-  --sidebar-color: #FFF;
-  --primary-color: #695CFE;
-  --primary-color-light: #F6F5FF;
-  --toggle-color: #DDD;
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
   --text-color: #707070;
 
   /* ====== Transition ====== */
@@ -23,19 +23,33 @@
   --trans-05: all 0.5s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-color: var(--body-color);
   transition: var(--trans-02);
 }
 
+.mode-light-active {
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+  --index-color: #c8aa5e;
+}
+
 .mode-dark-active {
-  --body-color: #18191A;
+  --body-color: #18191a;
   --sidebar-color: #242526;
-  --primary-color: #3A3B3C;
-  --primary-color-light: #3A3B3C;
-  --toggle-color: #FFF;
-  --text-color: #CCC;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+  --index-color: #c8aa5e;
 }

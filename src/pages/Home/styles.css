@@ -1,0 +1,165 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home {
+  padding: 0 20px;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #3e2c417e 0%, #261c2c98 100%),
+    url(../../assets/home/desktop-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 90%;
+}
+
+.home-social-media {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.home .home-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  font-size: 25px;
+  color: var(--toggle-color);
+}
+
+.home .home-icon:hover {
+  font-size: 40px;
+  transition: var(--trans-02);
+}
+
+.home-about {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-picture {
+  position: relative;
+  display: inline-block;
+}
+
+.home-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px 0 10px 0;
+}
+
+.home-hi {
+  margin-right: 5px;
+}
+
+.home-name {
+  display: inline;
+}
+
+.home-hi,
+.home-name,
+.home-phrase {
+  font-size: 32px;
+  color: var(--toggle-color);
+}
+
+.home-dev {
+  font-size: 32px;
+  color: var(--toggle-color);
+}
+
+.home-view-download {
+  height: 50px;
+  width: 250px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.home-button-cv {
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--toggle-color);
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.home-button-cv:hover {
+  font-size: 14px;
+  transition: var(--trans-03);
+  cursor: pointer;
+  background-color: #28a745;
+}
+
+.home-container-description {
+  background-color: var(--sidebar-color);
+  padding: 50px 20px;
+  text-align: left;
+}
+
+.home-title-under {
+  font-size: 32px;
+  color: var(--text-color);
+}
+
+.home-description-under {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.home-space-under {
+  display: flex;
+}
+
+.home-border-under {
+  border-top: 3px solid var(--index-color);
+  width: 120px;
+  height: auto;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1024px) {
+  .home-view-download {
+    width: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-about {
+    justify-content: center;
+  }
+
+  .home-image {
+    display: none;
+  }
+}
