@@ -13,7 +13,7 @@ export function Portfolio() {
   const screenDesktop = screenWidth > 768;
 
   return (
-    <div
+    <main
       className={
         portfolioState.darkLight === "light"
           ? "bodyContainer mode-light-active"
@@ -26,6 +26,6 @@ export function Portfolio() {
       <Description />
       <Experience />
       {screenMobile && <SideBar />}
-    </div>
+    </main>
   );
 }
