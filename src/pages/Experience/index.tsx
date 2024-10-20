@@ -20,7 +20,7 @@ export function Experience() {
   if (homeSpanishLanguage) experiencesLanguage = experiencesSpanish;
 
   return (
-    <div className="experience-container">
+    <div className="experience-container" id="experience">
       <h2 className="experience-title">{experiencesLanguage.mainInfo}</h2>
       <br />
 

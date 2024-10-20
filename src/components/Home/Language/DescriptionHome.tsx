@@ -5,7 +5,7 @@ interface Props {
 
 export function DescriptionHome({ about, description }: Props) {
   return (
-    <section className="home-content-under" id="about">
+    <section className="home-content-under">
       <h2 className="home-title-under">{about}</h2>
       <br />
       <div className="home-space-under">

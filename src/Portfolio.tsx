@@ -5,6 +5,7 @@ import { Experience } from "./pages/Experience";
 import { useScreenCurrent } from "./hooks/screenCurrent/useScreenCurrent";
 import { Description } from "./pages/Home/Description";
 import { NavBar } from "./pages/NavBar";
+import { Skills } from "./pages/Skills";
 
 export function Portfolio() {
   const { portfolioState } = useContext(PortfolioContext);
@@ -25,6 +26,7 @@ export function Portfolio() {
       <Home />
       <Description />
       <Experience />
+      <Skills />
       {screenMobile && <SideBar />}
     </main>
   );

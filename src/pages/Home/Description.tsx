@@ -21,7 +21,7 @@ export function Description() {
 
   return (
     // screenCurrent && (
-    <div className="home-container-description">
+    <div className="home-container-description" id="about">
       {homeEnglishLanguage && (
         <DescriptionHome about={"About me"} description={description} />
       )}
