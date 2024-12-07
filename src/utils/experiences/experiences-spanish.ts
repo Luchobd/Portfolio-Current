@@ -21,7 +21,7 @@ export const experiencesSpanish: PropsExperiences = {
     {
       date: 2023,
       numberDot: 3,
-      title: "Developer Web VTEX IO",
+      title: "Desarrollador Web VTEX IO",
       subtitle: "BoxTool",
       description:
         "Participé en el inicio de la creación de la web de Boxtool MX como desarrollador frontend. Colaboré estrechamente con el equipo de diseño y desarrollo para construir una plataforma funcional y atractiva, enfocada en la experiencia del usuario. Me encargué de implementar interfaces interactivas utilizando tecnologías frontend, asegurando una navegación fluida y un diseño responsive adaptado a diferentes dispositivos.",

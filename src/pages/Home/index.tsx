@@ -1,4 +1,3 @@
-import "boxicons/css/boxicons.min.css";
 import "./styles.css";
 import { useContext } from "react";
 import { PortfolioContext } from "../../context/Context";

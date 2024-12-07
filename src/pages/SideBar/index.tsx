@@ -1,8 +1,7 @@
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { PortfolioContext } from "../../context/Context";
 import { useSidebar } from "../../hooks/sidebar/useSidebar";
 import { DarkLightMode, Languages } from "../../components/index";
-import "boxicons/css/boxicons.min.css";
 import logo from "../../assets/sidebar/logo/logoLB.png";
 import "./styles.css";
 import { SidebarLink } from "../../components/SidebarLink";
@@ -11,6 +10,8 @@ import {
   SidebarInfo,
 } from "../../utils/Language/sidebar/sidebar-english";
 import { sidebarSpanish } from "../../utils/Language/sidebar/sidebar-spanish";
+import { ChevronIcon } from "../../components/Icons";
+import { HomeIcons, homeIcons } from "../../utils/Icons/home/home-icons";
 
 export function SideBar() {
   const { portfolioState } = useContext(PortfolioContext);
@@ -42,12 +43,12 @@ export function SideBar() {
 
         <i
           className={
-            isSidebarClose
-              ? "bx bx-chevron-right sidebar-toggle-open"
-              : "bx bx-chevron-right sidebar-toggle-close"
+            isSidebarClose ? "sidebar-toggle-open" : "sidebar-toggle-close"
           }
           onClick={onSidebar}
-        />
+        >
+          <ChevronIcon />
+        </i>
       </header>
 
       <div className="sidebar-menu-bar">
@@ -64,6 +65,19 @@ export function SideBar() {
               </div>
             ))}
           </ul>
+        </div>
+
+        <div
+          className="navbar-social-media-sidebar"
+          style={{ alignItems: isSidebarClose ? "center" : "flex-start" }}
+        >
+          {homeIcons.map((social: HomeIcons) => (
+            <Fragment key={social.id}>
+              <a href={social.href} target="_blank" title={social.title}>
+                <i>{social.icon}</i>
+              </a>
+            </Fragment>
+          ))}
         </div>
 
         <DarkLightMode isSidebarClose={isSidebarClose} />

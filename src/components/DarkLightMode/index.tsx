@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { PortfolioContext } from "../../context/Context";
+import { MoonIcon, SonIcon } from "../Icons";
 
 interface Props {
   isSidebarClose?: boolean;
@@ -7,7 +8,7 @@ interface Props {
 }
 
 export function DarkLightMode({ isSidebarClose, isShowText = true }: Props) {
-  const [isDarkLight, setIsDarkLight] = useState("dark");
+  const [isDarkLight, setIsDarkLight] = useState("light");
   const { toggleDarkLight, portfolioState } = useContext(PortfolioContext);
 
   const lightModeText =
@@ -28,10 +29,14 @@ export function DarkLightMode({ isSidebarClose, isShowText = true }: Props) {
         style={{ cursor: "pointer" }}
       >
         <div className="sidebar-moon-sun">
-          {isDarkLight === "dark" ? (
-            <i className="bx bx-sun sidebar-icon sun" />
+          {isDarkLight === "light" ? (
+            <i className="sidebar-icon">
+              <SonIcon />
+            </i>
           ) : (
-            <i className="bx bx-moon sidebar-icon moon" />
+            <i className="sidebar-icon">
+              <MoonIcon />
+            </i>
           )}
         </div>
         {isDarkLight === "dark" ? (

@@ -39,7 +39,7 @@ export function NavBar() {
           {homeIcons.map((social: HomeIcons) => (
             <Fragment key={social.id}>
               <a href={social.href} target="_blank" title={social.title}>
-                <i className={`${social.icon} navbar-icon`} />
+                <i>{social.icon}</i>
               </a>
             </Fragment>
           ))}

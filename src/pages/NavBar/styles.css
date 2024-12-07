@@ -46,6 +46,7 @@
   margin: 0 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-language-dark-light select {
@@ -75,10 +76,18 @@
 }
 
 .navbar-icon:hover {
-  font-size: 35px;
+  width: 24px;
+  height: 24px;
   transition: var(--trans-02);
 }
 
 .navbar-nav-link a {
   color: var(--text-color);
+}
+
+.navbar-social-media-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
 }
