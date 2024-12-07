@@ -1,14 +1,13 @@
 interface CardProps {
-  icon: string;
+  icon: React.ReactNode;
   name: string;
-  indexIcon: number;
 }
 
-export function Card({ icon, name, indexIcon }: CardProps) {
+export function Card({ icon, name }: CardProps) {
   return (
     <div className="card-container">
       <div className="card-content">
-        <i className={`${icon} card-icon card-icon-${indexIcon}`} />
+        <i>{icon}</i>
         <p className="card-name">{name}</p>
       </div>
     </div>

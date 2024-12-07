@@ -34,7 +34,7 @@ export function Experience() {
       </section>
       <br />
       {experiencesLanguage.experiencesDate.map((exp: ExperiencesInfo) => (
-        <div className="experience-content">
+        <div className="experience-content" key={exp.numberDot}>
           <div className="experience-date-dot">
             <span className="experience-date">{exp.date}</span>
             <span className="experience-dot">{exp.numberDot}</span>

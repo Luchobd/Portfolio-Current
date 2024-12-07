@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { PortfolioContext } from "../../context/Context";
 import { useSidebar } from "../../hooks/sidebar/useSidebar";
 import { DarkLightMode, Languages } from "../../components/index";
-import "boxicons/css/boxicons.min.css";
 import logo from "../../assets/sidebar/logo/logoLB.png";
 import "./styles.css";
 import { SidebarLink } from "../../components/SidebarLink";

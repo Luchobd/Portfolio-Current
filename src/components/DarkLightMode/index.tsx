@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { PortfolioContext } from "../../context/Context";
+import { MoonIcon, SonIcon } from "../Icons";
 
 interface Props {
   isSidebarClose?: boolean;
@@ -29,9 +30,13 @@ export function DarkLightMode({ isSidebarClose, isShowText = true }: Props) {
       >
         <div className="sidebar-moon-sun">
           {isDarkLight === "dark" ? (
-            <i className="bx bx-sun sidebar-icon sun" />
+            <i className="sidebar-icon">
+              <SonIcon />
+            </i>
           ) : (
-            <i className="bx bx-moon sidebar-icon moon" />
+            <i className="sidebar-icon">
+              <MoonIcon />
+            </i>
           )}
         </div>
         {isDarkLight === "dark" ? (

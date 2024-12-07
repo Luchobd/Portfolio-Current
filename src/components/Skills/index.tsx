@@ -5,9 +5,9 @@ import { Card } from "./Card";
 export function Cards() {
   return (
     <div className="cards-container">
-      {skillIcons.map((skill: SkillsIcons, index: number) => (
+      {skillIcons.map((skill: SkillsIcons) => (
         <Fragment key={skill.id}>
-          <Card icon={skill.icon} name={skill.name} indexIcon={index} />
+          <Card icon={skill.icon} name={skill.name} />
         </Fragment>
       ))}
     </div>

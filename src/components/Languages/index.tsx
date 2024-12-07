@@ -28,10 +28,10 @@ export function Languages({ isSidebarClose, isShowText = true }: Props) {
       onChange={handleLanguageChange}
     >
       <option value="english" className="sidebar-select-option">
-        🇺🇸 {!isSidebarClose && isShowText && <>English</>}
+        {!isSidebarClose && isShowText ? <>English</> : "🇺🇸"}
       </option>
       <option value="spanish" className="sidebar-select-option">
-        🇪🇸 {!isSidebarClose && isShowText && <>Español</>}
+        {!isSidebarClose && isShowText ? <>Español</> : "🇪🇸"}
       </option>
     </select>
   );
