@@ -8,7 +8,7 @@ interface Props {
 }
 
 export function DarkLightMode({ isSidebarClose, isShowText = true }: Props) {
-  const [isDarkLight, setIsDarkLight] = useState("dark");
+  const [isDarkLight, setIsDarkLight] = useState("light");
   const { toggleDarkLight, portfolioState } = useContext(PortfolioContext);
 
   const lightModeText =
@@ -29,7 +29,7 @@ export function DarkLightMode({ isSidebarClose, isShowText = true }: Props) {
         style={{ cursor: "pointer" }}
       >
         <div className="sidebar-moon-sun">
-          {isDarkLight === "dark" ? (
+          {isDarkLight === "light" ? (
             <i className="sidebar-icon">
               <SonIcon />
             </i>

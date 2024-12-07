@@ -5,7 +5,7 @@ import { PorfolioReducer, PortfolioState } from "./Reducer";
 const INITIAL_STATE: PortfolioState = {
   isResponsive: false,
   language: "en",
-  darkLight: "light",
+  darkLight: "dark",
 };
 
 interface Props {

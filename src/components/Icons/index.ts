@@ -5,6 +5,10 @@ export { SkillIcon } from "./library/header/SkillIcon.tsx";
 export { ProjectIcon } from "./library/header/ProjectIcon.tsx";
 export { CertificatesIcon } from "./library/header/CertificatesIcon.tsx";
 export { ContactIcon } from "./library/header/ContactIcon.tsx";
+export { CVIcon } from "./library/header/CVIcon.tsx";
+export { LinkedInIcon } from "./library/header/LinkedIn.tsx";
+export { GithubIcon } from "./library/header/Github.tsx";
+export { ChevronIcon } from "./library/header/Chevron.tsx";
 
 // Icons Dark Light
 export { MoonIcon } from "./library/header/MoonIcon.tsx";
