@@ -1,15 +1,6 @@
-import { useId } from "react";
-
-interface FormProps {
-  name: string;
-  email: string;
-  description: string;
-  placeholderName: string;
-  placeholderEmail: string;
-  placeholderInfo: string;
-  send: string;
-  reset: string;
-}
+import { useId, ChangeEvent, FormEvent } from "react";
+import { useFormError } from "../../hooks/formError/useFormError";
+import { FormProps, FormData } from "../../interfaces/form";
 
 export function Form({
   name,
@@ -21,11 +12,52 @@ export function Form({
   placeholderEmail,
   placeholderInfo,
 }: FormProps) {
+  const initialFormData: FormData = {
+    fullName: "",
+    email: "",
+    description: "",
+  };
+
+  const { formData, setFormData, formErrors, setFormErrors, validateForm } =
+    useFormError(initialFormData);
+
   const fullNameId = useId();
   const emailId = useId();
   const descriptionId = useId();
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+
+    setFormErrors({
+      ...formErrors,
+      [name]: "",
+    });
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+
+    if (validateForm()) {  
+      console.log("aka Formulario enviado:", formData);
+
+      setFormData(initialFormData);
+      setFormErrors({
+        fullName: "",
+        email: "",
+        description: "",
+      });
+    }
+  };
+
   return (
-    <form className="contact-form-inputs">
+    <form className="contact-form-inputs" onSubmit={handleSubmit}>
       <div className="contact-form-inputs-content">
         <div className="contact-form-label-input-name">
           <label htmlFor={fullNameId} className="contact-form-label-name">
@@ -34,9 +66,17 @@ export function Form({
           <input
             type="text"
             id={fullNameId}
-            className="contact-form-input-name"
+            name="fullName"
+            className={`contact-form-input-name ${
+              formErrors.fullName ? "input-error" : ""
+            }`}
             placeholder={placeholderName}
+            value={formData.fullName}
+            onChange={handleChange}
           />
+          {formErrors.fullName && (
+            <span className="error-message">{formErrors.fullName}</span>
+          )}
         </div>
 
         <div className="contact-form-label-input-email">
@@ -46,9 +86,17 @@ export function Form({
           <input
             type="text"
             id={emailId}
-            className="contact-form-input-mail"
+            name="email"
+            className={`contact-form-input-mail ${
+              formErrors.email ? "input-error" : ""
+            }`}
             placeholder={placeholderEmail}
+            value={formData.email}
+            onChange={handleChange}
           />
+          {formErrors.email && (
+            <span className="error-message">{formErrors.email}</span>
+          )}
         </div>
       </div>
 
@@ -63,10 +111,18 @@ export function Form({
           name="description"
           id={descriptionId}
           rows={5}
-          className="contact-form-input-description"
+          className={`contact-form-input-description ${
+            formErrors.description ? "input-error" : ""
+          }`}
           placeholder={placeholderInfo}
+          value={formData.description}
+          onChange={handleChange}
         />
+        {formErrors.description && (
+          <span className="error-message">{formErrors.description}</span>
+        )}
       </div>
+
       <div className="contact-form-buttons">
         <input type="reset" value={reset} className="contact-form-reset" />
         <input type="submit" value={send} className="contact-form-send" />
