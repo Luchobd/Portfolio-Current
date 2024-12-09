@@ -41,10 +41,19 @@ export function Form({
     });
   };
 
+  const handleReset = () => {
+    setFormData(initialFormData); // Restablece los valores iniciales
+    setFormErrors({
+      fullName: "",
+      email: "",
+      description: "",
+    });
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    if (validateForm()) {  
+    if (validateForm()) {
       console.log("aka Formulario enviado:", formData);
 
       setFormData(initialFormData);
@@ -57,7 +66,11 @@ export function Form({
   };
 
   return (
-    <form className="contact-form-inputs" onSubmit={handleSubmit}>
+    <form
+      className="contact-form-inputs"
+      onSubmit={handleSubmit}
+      onReset={handleReset}
+    >
       <div className="contact-form-inputs-content">
         <div className="contact-form-label-input-name">
           <label htmlFor={fullNameId} className="contact-form-label-name">

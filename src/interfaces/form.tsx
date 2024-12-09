@@ -1,7 +1,4 @@
 export interface FormProps {
-  title: string;
-  subTitle: string;
-  information: string;
   name: string;
   email: string;
   description: string;
