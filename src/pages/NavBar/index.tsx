@@ -18,9 +18,9 @@ export function NavBar() {
   return (
     <nav className="navbar-menu">
       <div className="navbar-menu-container">
-        <span className="navbar-logo">
+        <a href="#home" className="navbar-logo">
           <img src={logo} alt="logo" />
-        </span>
+        </a>
 
         <ul className="navbar-menu-links">
           {sidebarLanguage.map((info: NavbarInfo) => (

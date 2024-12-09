@@ -26,9 +26,9 @@ export function SideBar() {
     >
       <header>
         <div className="sidebar-image-text">
-          <span className="sidebar-image">
+          <a href="#home" className="sidebar-image">
             <img src={logo} alt="logo" />
-          </span>
+          </a>
 
           {!isSidebarClose && (
             <div className="sidebar-text sidebar-header-text">

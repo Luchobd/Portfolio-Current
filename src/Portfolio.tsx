@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { PortfolioContext } from "./context/Context";
-import { SideBar, Home, Footer } from "./pages";
+import { SideBar, Home, Footer, ContactForm } from "./pages";
 import { Experience } from "./pages/Experience";
 import { useScreenCurrent } from "./hooks/screenCurrent/useScreenCurrent";
 import { Description } from "./pages/Home/Description";
@@ -27,7 +27,7 @@ export function Portfolio() {
       <Description />
       <Experience />
       <Skills />
-
+      <ContactForm />
       <Footer />
       {screenMobile && <SideBar />}
     </main>

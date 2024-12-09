@@ -35,5 +35,15 @@
 }
 
 .footer-reserved-text {
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-reserved-text {
+    text-align: center;
+  }
 }
