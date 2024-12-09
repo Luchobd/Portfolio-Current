@@ -21,9 +21,9 @@ export const CVIcon: FC<CVIconProps> = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke={color}
-      stroke-width="1.25"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className={`icon icon-tabler icons-tabler-outline icon-tabler-file-cv ${className}`}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />

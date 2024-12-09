@@ -69,7 +69,16 @@
 
         .contact-form-input-name::placeholder,
         .contact-form-input-mail::placeholder {
-          color: #a3a3a3;
+          color: var(--placeholder-color);
+        }
+
+        .input-error {
+          border-color: var(--error-color);
+        }
+
+        .error-message {
+          color: var(--error-color);
+          font-size: 12px;
         }
       }
     }
@@ -93,7 +102,16 @@
       }
 
       .contact-form-input-description::placeholder {
-        color: #a3a3a3;
+        color: var(--placeholder-color);
+      }
+
+      .input-error {
+        border-color: var(--error-color);
+      }
+
+      .error-message {
+        color: var(--error-color);
+        font-size: 12px;
       }
     }
 
