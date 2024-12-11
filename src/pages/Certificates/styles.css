@@ -1,0 +1,26 @@
+.certificates-container {
+  padding: 20px;
+  background-color: var(--sidebar-color);
+}
+
+.certificates-title {
+  font-size: 32px;
+  color: var(--text-color);
+}
+
+.certificates-slider-container {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
+
+.certificates-slider-container img {
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .certificates-slider-container {
+    width: auto;
+    height: auto;
+  }
+}

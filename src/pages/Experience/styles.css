@@ -62,7 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0bf6c;
+  background-color: var(--yellow-color);
   border-radius: 50%;
   border: none;
   outline: none;
@@ -102,7 +102,7 @@
   .experience-component-date {
     display: block;
     font-size: 16px;
-    color: #f0bf6c;
+    color: var(--yellow-color);
     text-shadow: 0 0 10px var(--index-color);
   }
 }

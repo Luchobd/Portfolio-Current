@@ -1,6 +1,6 @@
 .footer-container {
   padding: 20px;
-  background-color: #1e4355;
+  background-color: var(--bg-footer);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +13,7 @@
 
 .footer-network-icon {
   padding: 8px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--white-color);
   border-radius: 50%;
   transition: all 0.2s ease;
 }
@@ -25,7 +25,7 @@
 .footer-network-icon:hover .navbar-icon {
   width: 20px;
   height: 20px;
-  color: #f0bf6c;
+  color: var(--yellow-color);
   transition: all 0.2s ease;
 }
 
@@ -35,5 +35,15 @@
 }
 
 .footer-reserved-text {
-  color: #FFFFFF;
+  color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-reserved-text {
+    text-align: center;
+  }
 }

@@ -31,7 +31,7 @@ export function Home() {
   const homeSpanishLanguage = portfolioState.language === "es";
 
   return (
-    <main className="home">
+    <main className="home" id="home">
       <section className="home-about">
         {homeEnglishLanguage && (
           <LanguageHome
