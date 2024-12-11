@@ -1,6 +1,8 @@
 import { useId, ChangeEvent, FormEvent } from "react";
 import { useFormError } from "../../hooks/formError/useFormError";
 import { FormProps, FormData } from "../../interfaces/form";
+import { sendEmail } from "../../api/sendEmail";
+import Swal from "sweetalert2";
 
 export function Form({
   name,
@@ -42,7 +44,7 @@ export function Form({
   };
 
   const handleReset = () => {
-    setFormData(initialFormData); // Restablece los valores iniciales
+    setFormData(initialFormData);
     setFormErrors({
       fullName: "",
       email: "",
@@ -54,13 +56,45 @@ export function Form({
     e.preventDefault();
 
     if (validateForm()) {
-      console.log("aka Formulario enviado:", formData);
+      sendEmail(formData);
+
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "bottom-end",
+        showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Your message was sent successfully.",
+      });
 
       setFormData(initialFormData);
       setFormErrors({
         fullName: "",
         email: "",
         description: "",
+      });
+    } else {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "bottom-end",
+        showConfirmButton: false,
+        timer: 7000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "warning",
+        title: "Please fill in all the fields.",
       });
     }
   };
