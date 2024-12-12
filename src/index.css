@@ -22,6 +22,9 @@
   --white-color: #ffffff;
   --yellow-color: #f0bf6c;
   --white-light-color: #f4f4f4;
+  --github-purple-color: #551a8b;
+  --github-bg-light: #d1d7e0;
+  --github-bg-dark: #1e1e1e;
 
   /* ====== Transition ====== */
   --trans-02: all 0.2s ease;
