@@ -8,7 +8,7 @@ export const myProjectsSpanish: MyProjects[] = [
   {
     id: 1,
     title: "Detallitos con amor",
-    subtitle: "comercio electrónico",
+    subtitle: "(comercio electrónico)",
     link: "https://github.com/Luchobd/Portfolio-Current",
     description: "Descripción del proyecto",
     image: project1,
@@ -16,8 +16,8 @@ export const myProjectsSpanish: MyProjects[] = [
   },
   {
     id: 2,
-    title: "Titulo",
-    subtitle: "Finanzas personales",
+    title: "Mi Dinero App",
+    subtitle: "(Finanzas personales)",
     link: "https://github.com/Luchobd/Portfolio-Current",
     description: "Descripción del proyecto",
     image: project2,
