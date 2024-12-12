@@ -15,7 +15,7 @@ export function MyProjects() {
 
   const title = homeSpanishLanguage ? "Mis Proyectos" : "My Projects";
   return (
-    <div className="projects-container">
+    <div id="projects" className="projects-container">
       <h2 className="projects-title">{title}</h2>
       <div className="projects-cards-container">
         {myProjects.map((project: MyProjectsType) => (
