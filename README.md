@@ -22,5 +22,5 @@ Este es mi portfolio personal desarrollado con React, TypeScript y Vite. Present
 - Express
 - Resend (para el formulario de contacto)
 
-## Url del proyecto
+## Url Portfolio
 https://.../
