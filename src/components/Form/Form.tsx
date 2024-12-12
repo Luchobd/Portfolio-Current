@@ -1,8 +1,9 @@
-import { useId, ChangeEvent, FormEvent } from "react";
+import { useId, ChangeEvent, FormEvent, useContext } from "react";
 import { useFormError } from "../../hooks/formError/useFormError";
 import { FormProps, FormData } from "../../interfaces/form";
 import { sendEmail } from "../../api/sendEmail";
 import Swal from "sweetalert2";
+import { PortfolioContext } from "../../context/Context";
 
 export function Form({
   name,
@@ -22,6 +23,10 @@ export function Form({
 
   const { formData, setFormData, formErrors, setFormErrors, validateForm } =
     useFormError(initialFormData);
+
+  const { portfolioState } = useContext(PortfolioContext);
+
+  const popupLanguage = portfolioState.language === "en";
 
   const fullNameId = useId();
   const emailId = useId();
@@ -71,7 +76,9 @@ export function Form({
       });
       Toast.fire({
         icon: "success",
-        title: "Your message was sent successfully.",
+        title: popupLanguage
+          ? "Your message was sent successfully."
+          : "Tu mensaje fue enviado correctamente.",
       });
 
       setFormData(initialFormData);
@@ -94,7 +101,9 @@ export function Form({
       });
       Toast.fire({
         icon: "warning",
-        title: "Please fill in all the fields.",
+        title: popupLanguage
+          ? "Please fill in all the fields."
+          : "Por favor, complete todos los campos.",
       });
     }
   };
