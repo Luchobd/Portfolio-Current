@@ -61,7 +61,6 @@
   justify-content: center;
   border: 2px solid var(--github-purple-color);
   border-radius: 50%;
-  background-color: var(--github-bg-dark);
   transition: var(--trans-02);
 }
 
