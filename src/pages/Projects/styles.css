@@ -69,6 +69,10 @@
   background-color: var(--github-bg-light);
 }
 
+.project-card-link-content a {
+  color: var(--github-purple-color);
+}
+
 .project-card-link-content svg {
   display: flex;
   align-items: center;
