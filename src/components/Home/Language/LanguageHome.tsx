@@ -1,4 +1,8 @@
-import YO from "../../../assets/home/luis-w-blanco.png";
+import { useContext } from "react";
+import { PortfolioContext } from "../../../context/Context";
+import EnglishCV from "../../../assets/CV/cv-luis-blanco-english.pdf";
+import SpanishCV from "../../../assets/CV/cv-luis-blanco-spanish.pdf";
+import Dev from "../../../assets/home/luis-w-blanco.png";
 
 interface Props {
   hi: string;
@@ -11,6 +15,10 @@ interface Props {
 }
 
 export function LanguageHome({ hi, name, dev, phrase, view, download }: Props) {
+  const { portfolioState } = useContext(PortfolioContext);
+  const isLanguageEnglish = portfolioState.language === "en";
+
+  const downloadCV = isLanguageEnglish ? EnglishCV : SpanishCV;
   return (
     <>
       <aside className="home-title home-space">
@@ -21,16 +29,12 @@ export function LanguageHome({ hi, name, dev, phrase, view, download }: Props) {
         <h1 className="home-dev">{dev}</h1>
         <small className="home-phrase">{phrase}</small>
         <div className="home-view-download">
-          <a
-            className="home-button-cv"
-            href="../../../../public/CV/CV-Luis-Blanco.pdf"
-            target="_blank"
-          >
+          <a className="home-button-cv" href={downloadCV} target="_blank">
             {view}
           </a>
           <a
             className="home-button-cv"
-            href="../../../../public/CV/CV-Luis-Blanco.pdf"
+            href={downloadCV}
             download="Curriculum-Luis-Blanco"
           >
             {download}
@@ -39,7 +43,7 @@ export function LanguageHome({ hi, name, dev, phrase, view, download }: Props) {
       </aside>
       <aside className="home-content">
         <picture className="home-picture">
-          <img src={YO} alt="YO" className="home-image" />
+          <img src={Dev} alt="Luis-Blanco-Dev" className="home-image" />
         </picture>
       </aside>
     </>
