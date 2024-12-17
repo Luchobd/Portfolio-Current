@@ -18,7 +18,7 @@ export interface ExperiencesInfo {
 
 export const experiences: PropsExperiences = {
   mainInfo: "Experience",
-  company: "ITGlobers from 2022...",
+  company: "ITGlobers from 2022.",
   title: "Software Developer",
   subtitle: "Consulting",
   description:
@@ -30,7 +30,7 @@ export const experiences: PropsExperiences = {
       title: "Developer Web and Mobile",
       subtitle: "Cencosud",
       description:
-        "I participate in the maintenance and improvement of the web platforms and in the refactoring of the mobile applications for Cencosud stores, working as a developer in both areas. My work includes optimizing the code, improving the efficiency and structure of the applications to ensure their performance and scalability. Additionally, I focus on implementing new functionalities, making UI/UX interface adjustments, and fixing bugs, ensuring a smooth user experience aligned with the company's business needs. Thanks to my work, the platforms have remained up-to-date and in line with business objectives.",
+        "I participate in the maintenance and improvement of the web platforms and mobile applications of Cencosud stores, working as a developer in both areas. My work includes code optimization, improving the efficiency and structure of the applications to ensure their performance and scalability. Additionally, I focus on implementing new functionalities, making adjustments to UI/UX interfaces, and fixing bugs, ensuring a smooth user experience aligned with the company's business needs. This effort has allowed the platforms to remain updated and in tune with the business objectives.",
       technologies:
         "HTML, CSS, JavaScript, TypeScript, React, React Native, VTEX IO, Git, Scrum.",
     },
@@ -40,7 +40,7 @@ export const experiences: PropsExperiences = {
       title: "Developer Web VTEX IO",
       subtitle: "BoxTool",
       description:
-        "I participated in the initiation of the creation of the Boxtool MX website as a frontend developer. I collaborated closely with the design and development team to build a functional and attractive platform focused on user experience. I was responsible for implementing interactive interfaces using frontend technologies, ensuring smooth navigation and a responsive design adapted to different devices.",
+        "I contributed from the beginning to the creation of the Boxtool MX website as a frontend developer, working closely with the client and the design and development teams. My focus was on building a functional and visually appealing platform, prioritizing an optimal user experience. I implemented interactive interfaces using modern frontend technologies, ensuring smooth navigation and a responsive design perfectly adapted to various devices.",
       technologies: "HTML, CSS, VTEX IO, Git, Scrum.",
     },
     {
@@ -49,7 +49,7 @@ export const experiences: PropsExperiences = {
       title: "Developer Web",
       subtitle: "Group Elektra and Italika",
       description:
-        "I collaborated as a frontend developer in the maintenance and customization of the web platforms for Elektra and Italika. During my time on these projects, I worked on implementing adjustments and improvements requested by the client, following the guidelines of the work team. Ensuring that the platforms maintained their performance and adaptability.",
+        "I collaborated as a frontend developer in the maintenance and customization of the web platforms for Elektra and Italika. During my time on these projects, I worked on implementing adjustments and improvements requested by the client, following the guidelines of the team. I ensured that the platforms maintained their performance and adaptability.",
       technologies:
         "HTML, CSS, JavaScript, TypeScript, React, VTEX IO, Git, Scrum.",
     },
@@ -59,7 +59,7 @@ export const experiences: PropsExperiences = {
       title: "Frontend VTEX IO",
       subtitle: "Daviplata Marketplace",
       description:
-        "I participated in the creation of the marketplace application for Daviplata, working as a Frontend Developer. I collaborated with a multidisciplinary team to develop an efficient and user-friendly platform that allows users to make online purchases with their Daviplata accounts. I was responsible for implementing user interfaces that offered a clear and seamless experience. To manage the logic, functionality, and client-side information, I worked on the VTEX APIs integrated into the marketplace. I contributed to the successful delivery of the application within the scheduled time frame, meeting the requirements of the end user.",
+        "I participated in the creation of the marketplace application for Daviplata, working as a Frontend Developer. I collaborated with a multidisciplinary team to develop an efficient and user-friendly platform that allows users to make online purchases using their Daviplata accounts. I was responsible for implementing user interfaces that provided a clear and seamless experience. To manage the logic, functionality, and information from the client side, I worked on the VTEX APIs integrated into the marketplace. I contributed to the successful delivery of the application within the scheduled timeframe, meeting the end-user requirements.",
       technologies:
         "HTML, CSS, JavaScript, TypeScript, React, React Native, VTEX IO, Git, Scrum.",
     },

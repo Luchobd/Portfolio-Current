@@ -13,6 +13,8 @@ import {
   GraphqlIcon,
 } from "../../../components/Icons";
 import { v4 as uuidv4 } from "uuid";
+import { NextIcon } from "../../../components/Icons/library/skills/NextIcon";
+import { VtexIcon } from "../../../components/Icons/library/skills/VtexIcon";
 
 export interface SkillsIcons {
   id: string;
@@ -76,10 +78,19 @@ export const skillIcons: SkillsIcons[] = [
     name: "PostgreSQL",
     icon: <PgsqlIcon />,
   },
-
   {
     id: uuidv4(),
     name: "GraphQL",
     icon: <GraphqlIcon />,
+  },
+  {
+    id: uuidv4(),
+    name: "Next",
+    icon: <NextIcon />,
+  },
+  {
+    id: uuidv4(),
+    name: "Vtex IO",
+    icon: <VtexIcon />,
   },
 ];
