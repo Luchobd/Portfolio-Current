@@ -78,11 +78,11 @@ export const skillIcons: SkillsIcons[] = [
     name: "PostgreSQL",
     icon: <PgsqlIcon />,
   },
-  // {
-  // id: uuidv4(),
-  // name: "GraphQL",
-  // icon: <GraphqlIcon />,
-  // },
+  {
+    id: uuidv4(),
+    name: "GraphQL",
+    icon: <GraphqlIcon />,
+  },
   {
     id: uuidv4(),
     name: "Next",

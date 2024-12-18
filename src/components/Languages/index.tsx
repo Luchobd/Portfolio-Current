@@ -1,5 +1,8 @@
-import { ChangeEvent, useContext } from "react";
+import { ChangeEvent, useContext, useMemo } from "react";
 import { PortfolioContext } from "../../context/Context";
+import { EnglishFlagIcon } from "../Icons/library/header/EnglishFlag";
+import { SpanishFlagIcon } from "../Icons/library/header/SpanishFlag";
+import { useScreenCurrent } from "../../hooks/screenCurrent/useScreenCurrent";
 
 interface Props {
   isSidebarClose?: boolean;
@@ -7,7 +10,15 @@ interface Props {
 }
 
 export function Languages({ isSidebarClose, isShowText = true }: Props) {
-  const { changeLanguage } = useContext(PortfolioContext);
+  const { changeLanguage, portfolioState } = useContext(PortfolioContext);
+  const { screenWidth } = useScreenCurrent();
+
+  const currentLanguage =
+    portfolioState.language === "en" ? (
+      <EnglishFlagIcon />
+    ) : (
+      <SpanishFlagIcon />
+    );
 
   const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
@@ -21,18 +32,30 @@ export function Languages({ isSidebarClose, isShowText = true }: Props) {
     }
   };
 
+  const { screenDesktop } = useMemo(
+    () => ({
+      screenDesktop: screenWidth > 768,
+    }),
+    [screenWidth]
+  );
+
   return (
-    <select
-      name="languages"
-      className="sidebar-select"
-      onChange={handleLanguageChange}
-    >
-      <option value="english" className="sidebar-select-option">
-        {!isSidebarClose && isShowText ? <>English</> : "🇺🇸"}
-      </option>
-      <option value="spanish" className="sidebar-select-option">
-        {!isSidebarClose && isShowText ? <>Español</> : "🇪🇸"}
-      </option>
-    </select>
+    <div className="sidebar-language-container">
+      <span className="sidebar-language-flag">
+        {screenDesktop && currentLanguage}
+      </span>
+      <select
+        name="languages"
+        className="sidebar-select"
+        onChange={handleLanguageChange}
+      >
+        <option value="english" className="sidebar-select-option">
+          {!isSidebarClose && isShowText ? <>English</> : <>US</>}
+        </option>
+        <option value="spanish" className="sidebar-select-option">
+          {!isSidebarClose && isShowText ? <>Español</> : <>ES</>}
+        </option>
+      </select>
+    </div>
   );
 }
