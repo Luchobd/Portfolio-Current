@@ -4,7 +4,6 @@ import {
   JavascriptIcon,
   TypescriptIcon,
   ReactIcon,
-  ReactNativeIcon,
   NodeIcon,
   FigmaIcon,
   MongoIcon,
@@ -51,11 +50,11 @@ export const skillIcons: SkillsIcons[] = [
   {
     id: uuidv4(),
     name: "React Native",
-    icon: <ReactNativeIcon />,
+    icon: <ReactIcon />,
   },
   {
     id: uuidv4(),
-    name: "Node",
+    name: "Node.js",
     icon: <NodeIcon />,
   },
   {
@@ -85,7 +84,7 @@ export const skillIcons: SkillsIcons[] = [
   },
   {
     id: uuidv4(),
-    name: "Next",
+    name: "Next.js",
     icon: <NextIcon />,
   },
   {
