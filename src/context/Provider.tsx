@@ -4,7 +4,7 @@ import { PorfolioReducer, PortfolioState } from "./Reducer";
 
 const INITIAL_STATE: PortfolioState = {
   isResponsive: false,
-  language: "en",
+  language: "es",
   darkLight: "dark",
 };
 

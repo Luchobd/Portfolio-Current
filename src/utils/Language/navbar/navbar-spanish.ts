@@ -23,11 +23,11 @@ export const navbarSpanish: NavbarInfo[] = [
     name: "Habilidades",
     path: "#skills",
   },
-  {
-    id: uuidv4(),
-    name: "Proyectos",
-    path: "#projects",
-  },
+  // {
+  //   id: uuidv4(),
+  //   name: "Proyectos",
+  //   path: "#projects",
+  // },
   {
     id: uuidv4(),
     name: "Certificados",

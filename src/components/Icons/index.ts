@@ -27,3 +27,8 @@ export { MongoIcon } from "./library/skills/MongoIcon.tsx";
 export { GitIcon } from "./library/skills/GitIcon.tsx";
 export { PgsqlIcon } from "./library/skills/PostgresIcon.tsx";
 export { GraphqlIcon } from "./library/skills/GraphqlIcon.tsx";
+export { NextIcon } from "./library/skills/NextIcon.tsx";
+export { VtexIcon } from "./library/skills/VtexIcon.tsx";
+export { NestIcon } from "./library/skills/NestIcon.tsx";
+export { ExpressIcon } from "./library/skills/ExpressIcon.tsx";
+export { JestIcon } from "./library/skills/JestIcon.tsx";

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { PortfolioContext } from "../../../context/Context";
 import EnglishCV from "../../../assets/CV/cv-luis-blanco-english.pdf";
 import SpanishCV from "../../../assets/CV/cv-luis-blanco-spanish.pdf";
-import Dev from "../../../assets/home/luis-w-blanco.png";
+import DevComic from "../../../assets/home/LuchoDev.png";
 
 interface Props {
   hi: string;
@@ -19,6 +19,13 @@ export function LanguageHome({ hi, name, dev, phrase, view, download }: Props) {
   const isLanguageEnglish = portfolioState.language === "en";
 
   const downloadCV = isLanguageEnglish ? EnglishCV : SpanishCV;
+
+  const viewEnglishCV =
+    "https://drive.google.com/file/d/1vUFMqJkOlXqmGGmYRsK-dH1zZRGaw4X9/view?usp=drive_link";
+  const viewSpanishCV =
+    "https://drive.google.com/file/d/1WQmAF865jTCWL5MYaUIMfx7NKAwz1zV5/view?usp=drive_link";
+
+  const showCV = isLanguageEnglish ? viewEnglishCV : viewSpanishCV;
   return (
     <>
       <aside className="home-title home-space">
@@ -29,7 +36,7 @@ export function LanguageHome({ hi, name, dev, phrase, view, download }: Props) {
         <h1 className="home-dev">{dev}</h1>
         <small className="home-phrase">{phrase}</small>
         <div className="home-view-download">
-          <a className="home-button-cv" href={downloadCV} target="_blank">
+          <a className="home-button-cv" href={showCV} target="_blank">
             {view}
           </a>
           <a
@@ -43,7 +50,7 @@ export function LanguageHome({ hi, name, dev, phrase, view, download }: Props) {
       </aside>
       <aside className="home-content">
         <picture className="home-picture">
-          <img src={Dev} alt="Luis-Blanco-Dev" className="home-image" />
+          <img src={DevComic} alt="Luis-Blanco-Dev" className="home-image" />
         </picture>
       </aside>
     </>

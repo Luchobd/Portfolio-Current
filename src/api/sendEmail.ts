@@ -1,9 +1,9 @@
 import { FormData } from "../interfaces/form";
 
-const API = "http://localhost:3000/email";
+const URL = "https://send-email-portfolio.onrender.com/email";
 export const sendEmail = async (formData: FormData) => {
   try {
-    const response = await fetch(API, {
+    const response = await fetch(URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -25,9 +25,9 @@ export const galleryCertificates = [
   },
   {
     original:
-      "https://res.cloudinary.com/dbzntthic/image/upload/v1733714585/diploma-react-native_jfrl99.jpg",
+      "https://res.cloudinary.com/dbzntthic/image/upload/w_600,h_464,c_fill/v1743869351/certificado-nest_lplawo.jpg",
     thumbnail:
-      "https://res.cloudinary.com/dbzntthic/image/upload/v1733714585/diploma-react-native_jfrl99.jpg",
+      "https://res.cloudinary.com/dbzntthic/image/upload/w_600,h_464,c_fill/v1743869351/certificado-nest_lplawo.jpg",
   },
   {
     original:

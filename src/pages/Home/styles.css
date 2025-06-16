@@ -53,14 +53,14 @@ a {
 
 .home-picture {
   position: relative;
-  display: inline-block;
-}
-
-.home-image {
   max-width: 100%;
   width: 100%;
   height: auto;
-  display: block;
+}
+
+.home-image {
+  width: 450px;
+  display: flex;
   border-radius: 10px 0 10px 0;
 }
 

@@ -9,11 +9,13 @@ import {
   MongoIcon,
   GitIcon,
   PgsqlIcon,
-  GraphqlIcon,
+  NextIcon,
+  VtexIcon,
+  NestIcon,
+  ExpressIcon,
+  JestIcon
 } from "../../../components/Icons";
 import { v4 as uuidv4 } from "uuid";
-import { NextIcon } from "../../../components/Icons/library/skills/NextIcon";
-import { VtexIcon } from "../../../components/Icons/library/skills/VtexIcon";
 
 export interface SkillsIcons {
   id: string;
@@ -54,13 +56,33 @@ export const skillIcons: SkillsIcons[] = [
   },
   {
     id: uuidv4(),
-    name: "Node.js",
-    icon: <NodeIcon />,
+    name: "Next",
+    icon: <NextIcon />,
   },
   {
     id: uuidv4(),
     name: "Figma",
     icon: <FigmaIcon />,
+  },
+  {
+    id: uuidv4(),
+    name: "Node",
+    icon: <NodeIcon />,
+  },
+  {
+    id: uuidv4(),
+    name: "Express",
+    icon: <ExpressIcon />,
+  },
+  {
+    id: uuidv4(),
+    name: "Nest",
+    icon: <NestIcon />,
+  },
+  {
+    id: uuidv4(),
+    name: "Jest",
+    icon: <JestIcon />,
   },
   {
     id: uuidv4(),
@@ -76,16 +98,6 @@ export const skillIcons: SkillsIcons[] = [
     id: uuidv4(),
     name: "PostgreSQL",
     icon: <PgsqlIcon />,
-  },
-  {
-    id: uuidv4(),
-    name: "GraphQL",
-    icon: <GraphqlIcon />,
-  },
-  {
-    id: uuidv4(),
-    name: "Next.js",
-    icon: <NextIcon />,
   },
   {
     id: uuidv4(),

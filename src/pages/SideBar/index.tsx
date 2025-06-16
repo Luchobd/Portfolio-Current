@@ -11,13 +11,16 @@ import {
 } from "../../utils/Language/sidebar/sidebar-english";
 import { sidebarSpanish } from "../../utils/Language/sidebar/sidebar-spanish";
 import { ChevronIcon } from "../../components/Icons";
-import { HomeIcons, homeIcons } from "../../utils/Icons/home/home-icons";
+import { useNetworkIcons } from "../../utils/Icons/home/useNetworkIcons";
+import { NetworkIconsProps } from "../../interfaces/networking";
 
 export function SideBar() {
   const { portfolioState } = useContext(PortfolioContext);
   const { isSidebarClose, onSidebar } = useSidebar();
   const sidebarLanguage =
     portfolioState.language === "en" ? sidebarEnglish : sidebarSpanish;
+  const { networkIcons } = useNetworkIcons();
+
   return (
     <nav
       className={
@@ -71,7 +74,7 @@ export function SideBar() {
           className="navbar-social-media-sidebar"
           style={{ alignItems: isSidebarClose ? "center" : "flex-start" }}
         >
-          {homeIcons.map((social: HomeIcons) => (
+          {networkIcons.map((social: NetworkIconsProps) => (
             <Fragment key={social.id}>
               <a href={social.href} target="_blank" title={social.title}>
                 <i>{social.icon}</i>

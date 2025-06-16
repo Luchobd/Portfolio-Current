@@ -24,11 +24,11 @@ export const GithubIcon: FC<GithubProps> = ({
       fill={color}
       className={className}
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         <title>github [#142]</title> <desc>Created with Sketch.</desc>
@@ -36,7 +36,7 @@ export const GithubIcon: FC<GithubProps> = ({
         <g
           id="Page-1"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
           fill-rule="evenodd"
         >

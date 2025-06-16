@@ -7,14 +7,17 @@ import { navbarSpanish } from "../../utils/Language/navbar/navbar-spanish";
 import { PortfolioContext } from "../../context/Context";
 import { NavbarLink } from "../../components/NavbarLink";
 import logo from "../../assets/sidebar/logo/logoLB.png";
-import { HomeIcons, homeIcons } from "../../utils/Icons/home/home-icons";
-import "./styles.css";
+import { useNetworkIcons } from "../../utils/Icons/home/useNetworkIcons";
+import { NetworkIconsProps } from "../../interfaces/networking";
 import { DarkLightMode, Languages } from "../../components";
+import "./styles.css";
 
 export function NavBar() {
   const { portfolioState } = useContext(PortfolioContext);
   const sidebarLanguage =
     portfolioState.language === "en" ? navbarEnglish : navbarSpanish;
+  const { networkIcons } = useNetworkIcons();
+
   return (
     <nav className="navbar-menu">
       <div className="navbar-menu-container">
@@ -36,7 +39,7 @@ export function NavBar() {
         </section>
 
         <section className="navbar-social-media">
-          {homeIcons.map((social: HomeIcons) => (
+          {networkIcons.map((social: NetworkIconsProps) => (
             <Fragment key={social.id}>
               <a href={social.href} target="_blank" title={social.title}>
                 <i>{social.icon}</i>

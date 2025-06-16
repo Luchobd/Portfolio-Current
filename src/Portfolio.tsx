@@ -7,7 +7,7 @@ import { Description } from "./pages/Home/Description";
 import { NavBar } from "./pages/NavBar";
 import { Skills } from "./pages/Skills";
 import { Certificates } from "./pages/Certificates";
-import { MyProjects } from "./pages/Projects";
+// import { MyProjects } from "./pages/Projects";
 
 export function Portfolio() {
   const { portfolioState } = useContext(PortfolioContext);
@@ -45,7 +45,7 @@ export function Portfolio() {
       <Description />
       <Experience />
       <Skills />
-      <MyProjects />
+      {/* <MyProjects /> */}
       <Certificates />
       <ContactForm />
       <Footer />
