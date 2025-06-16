@@ -15,5 +15,5 @@ export const homeEnglish: HomeEnglish = {
   phrase: "Imagine, Think, Code and Create.",
   view: "Look at CV",
   download: "Download CV",
-  description: "Software developer with over 3 years of experience, specialized in JavaScript and technologies such as Node.js, React.js, React Native, and VTEX IO. I focus on creating scalable solutions for web and mobile applications, utilizing best practices. I am always looking to learn new tools, improve efficiency, and be a valuable asset to any team. My ability to solve complex problems and my commitment to continuous improvement allow me to deliver high-quality solutions.",
+  description: "Software developer with more than 3 years of experience, specialized in the development of scalable solutions for web and mobile applications. I focus on applying best practices to build robust and maintainable products. I am interested in continuing to grow professionally, adding value with a problem-solving mindset and delivering agile solutions. Committed to product quality and teamwork.",
 };
