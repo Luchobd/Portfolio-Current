@@ -21,9 +21,9 @@ export function LanguageHome({ hi, name, dev, phrase, view, download }: Props) {
   const downloadCV = isLanguageEnglish ? EnglishCV : SpanishCV;
 
   const viewEnglishCV =
-    "https://drive.google.com/file/d/1vUFMqJkOlXqmGGmYRsK-dH1zZRGaw4X9/view?usp=drive_link";
+    "https://drive.google.com/file/d/1mgAcfahL0NbnzD0ccyCDGy8qdSc6TwSF/view?usp=drive_link";
   const viewSpanishCV =
-    "https://drive.google.com/file/d/1WQmAF865jTCWL5MYaUIMfx7NKAwz1zV5/view?usp=drive_link";
+    "https://drive.google.com/file/d/1hmA8JfrVGNtZ4bQlFLhhJfC3kii526Kr/view?usp=drive_link";
 
   const showCV = isLanguageEnglish ? viewEnglishCV : viewSpanishCV;
   return (
@@ -42,7 +42,7 @@ export function LanguageHome({ hi, name, dev, phrase, view, download }: Props) {
           <a
             className="home-button-cv"
             href={downloadCV}
-            download="Curriculum-Luis-Blanco"
+            download="curriculum_luis_blanco"
           >
             {download}
           </a>
