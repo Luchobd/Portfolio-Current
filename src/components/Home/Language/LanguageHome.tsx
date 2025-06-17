@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { PortfolioContext } from "../../../context/Context";
-import EnglishCV from "../../../assets/CV/cv-luis-blanco-english.pdf";
-import SpanishCV from "../../../assets/CV/cv-luis-blanco-spanish.pdf";
+import EnglishCV from "../../../assets/CV/CV-LB-English.pdf";
+import SpanishCV from "../../../assets/CV/CV-LB-Spanish.pdf";
 import DevComic from "../../../assets/home/LuchoDev.png";
 
 interface Props {
