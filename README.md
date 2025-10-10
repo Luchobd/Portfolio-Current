@@ -23,4 +23,4 @@ Este es mi portfolio personal desarrollado con React, TypeScript y Vite. Present
 - Resend (para el formulario de contacto)
 
 ## Url Portfolio
-[Luis Blanco Web](https://luis-blanco.vercel.app/)
+<a href="https://luis-blanco.vercel.app/" target="_blank" rel="noopener noreferrer">Luis Blanco Web</a>
